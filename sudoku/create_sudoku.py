@@ -20,9 +20,6 @@ class GenerateSudoku():
                           [8, 3, 4, 1, 6, 5, 2, 7, 9]])
 
     def __init__(self, count):
-        # Run time timer
-        startTime = time.time()
-
         print("[INFO] Generating", count, "sudoku...")
         with open('sudoku.txt', 'a+') as f:
             for _ in range(count):
@@ -30,8 +27,7 @@ class GenerateSudoku():
                 numpy.savetxt(f, self.sudoku, fmt='%d')
                 f.write('\n')
 
-        print('[INFO] Generated. Total time:',
-              round(time.time() - startTime, 4), 'seconds.')
+        print('[INFO] Generation process complete.')
 
     def swapRow(self, row1, row2):
         self.sudoku[[row1, row2]] = self.sudoku[[row2, row1]]
