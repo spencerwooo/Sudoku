@@ -31,6 +31,10 @@ def main():
         print(Fore.RED + "[ERR] Number must be larger than 0.", Style.RESET_ALL)
     except IOError:
         print(Fore.RED + "[ERR] Error reading file.", Style.RESET_ALL)
+    except Exception:
+        print(Fore.CYAN + "[INFO] Usage:\n")
+        print("[USAGE] `./__main__.py -c 10`: Create 10 sudoku final rounds.")
+        print("[USAGE] `./__main__.py -s \"solve-me.txt\"`: Solve sudoku puzzle at `solve-me.txt`.\n", Style.RESET_ALL)
 
     finally:
         print('[TIME] Total time:', round(
