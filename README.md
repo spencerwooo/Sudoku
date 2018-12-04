@@ -35,7 +35,6 @@ GUI，实现一个窗口程序。数独游戏。
 
 4 directories, 11 files
 
-
 ```
 
 ## 编译构建
@@ -45,10 +44,13 @@ GUI，实现一个窗口程序。数独游戏。
 $ cd sudoku
 
 # 生成一定数量的数独终局至文件 'sudoku.txt'
-$ ./__main__.py -c 10
+$ python3 __main__.py -c 10
+```
+![](https://i.loli.net/2018/12/04/5c063e985d853.png)
 
+``` bash
 # 从指定文件路径读取文件并解决其中的数独
-$ ./__main__.py -s 'solve-me.txt'
+$ python3 __main__.py -s 'solve-me.txt'
 ```
 
 ## 项目进展
