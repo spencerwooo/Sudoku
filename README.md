@@ -46,7 +46,8 @@ $ cd sudoku
 # 生成一定数量的数独终局至文件 'sudoku.txt'
 $ python3 __main__.py -c 10
 ```
-![](https://i.loli.net/2018/12/04/5c063e985d853.png)
+
+![](https://i.loli.net/2018/12/04/5c063f6c2c75c.png)
 
 ``` bash
 # 从指定文件路径读取文件并解决其中的数独
