@@ -2,6 +2,7 @@
 # -*- coding=utf-8 -*-
 
 import numpy
+import time
 
 
 class SolveSudoku():
@@ -10,8 +11,13 @@ class SolveSudoku():
              # An ignorant initial baby sudoku
             solveThatSudoku = numpy.loadtxt(sudokuPath, dtype=int)
             print("[INFO] Begin solving sudoku at", sudokuPath, "...")
-            self.solvingSudoku(solveThatSudoku)
-            print(solveThatSudoku)
+            sudokuCount = int(len(solveThatSudoku) / 9)
+            sudokuList = numpy.array_split(solveThatSudoku, sudokuCount)
+            for eachSudoku in sudokuList:
+                startTime = time.time()
+                self.solvingSudoku(eachSudoku)
+                print(eachSudoku)
+                print('[SOLVED!] Time:', round(time.time() - startTime, 4), 'seconds.')
 
         except FileNotFoundError:
             print("[ERR] File not found.")
