@@ -13,11 +13,15 @@ class SolveSudoku():
             print("[INFO] Begin solving sudoku at", sudokuPath, "...")
             sudokuCount = int(len(solveThatSudoku) / 9)
             sudokuList = numpy.array_split(solveThatSudoku, sudokuCount)
-            for eachSudoku in sudokuList:
-                startTime = time.time()
-                self.solvingSudoku(eachSudoku)
-                print(eachSudoku)
-                print('[SOLVED!] Time:', round(time.time() - startTime, 4), 'seconds.')
+            with open('sudoku.txt', 'a+') as f:
+                f.truncate(0)
+                for eachSudoku in sudokuList:
+                    startTime = time.time()
+                    self.solvingSudoku(eachSudoku)
+                    # print(eachSudoku)
+                    numpy.savetxt(f, eachSudoku, fmt='%d')
+                    f.write('\n')
+                    print('[SOLVED!] Time:', round(time.time() - startTime, 4), 'seconds.')
 
         except FileNotFoundError:
             print("[ERR] File not found.")
