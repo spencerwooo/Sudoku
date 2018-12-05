@@ -39,6 +39,10 @@ module.exports = {
         link: 'https://github.com/spencerwooo/Sudoku'
       },
     ],
+    sidebar: {
+      '/Progress/': [''],
+      '/': ['']
+    },
     lastUpdated: 'Last Updated'
   }
 }

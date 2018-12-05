@@ -2,7 +2,7 @@
 home: true
 heroImage: /hero.png
 actionText: 开发历程
-actionLink: /
+actionLink: /Progress/
 features:
 - title: 🔢
   details: 快速生成成千上万个数独终局
