@@ -1,15 +1,19 @@
 # Sudoku
 
-🍳 数独 | BIT 软件工程个人作业
+> 🍳 数独 | BIT 软件工程个人作业
+
+- GitHub 项目首页：[https://github.com/spencerwooo/Sudoku](https://github.com/spencerwooo/Sudoku)
+- 项目博客主页：[https://spencerwoo.com/Sudoku](https://spencerwoo.com/Sudoku)
+- 项目开发历程主页：[https://spencerwoo.com/Sudoku/Progress](https://spencerwoo.com/Sudoku/Progress)
 
 ## 需求分析
 
-**基础：**
+**⚡ 基础：**
 
 1. 命令行程序：生成不重复的数独终局至文件
 2. 读取文件中的数独问题，求解并将结果输出至文件
 
-**进阶：**
+**🚀 进阶：**
 
 GUI，实现一个窗口程序。数独游戏。
 
@@ -40,14 +44,14 @@ GUI，实现一个窗口程序。数独游戏。
 $ cd sudoku
 
 # 生成一定数量的数独终局至文件 'sudoku.txt'
-$ python3 main.py -c 2
+$ python main.py -c 2
 ```
 
 ![](https://i.loli.net/2018/12/04/5c063f6c2c75c.png)
 
 ``` bash
 # 从指定文件路径读取文件并解决其中的数独
-$ python3 main.py -s 'solve-me.txt'
+$ python main.py -s 'solve-me.txt'
 ```
 
 ![](https://i.loli.net/2018/12/05/5c07868b6ca7b.png)
@@ -98,3 +102,11 @@ $ python3 main.py -s 'solve-me.txt'
 ```
 
 [2018-12-5] 时间：142.0937s（_〆(´Д｀ )这垃圾性能）
+
+---
+
+🔢 **Sudoku** ©Spencer Woo. Released under the MIT License.
+
+Authored and maintained by Spencer Woo.
+
+[@Blog](https://spencerwoo.com/) · [ⒿJike](https://web.okjike.com/user/4DDA0425-FB41-4188-89E4-952CA15E3C5E/post) · [@GitHub](https://github.com/spencerwooo)
