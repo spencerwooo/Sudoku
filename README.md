@@ -23,18 +23,14 @@ GUI，实现一个窗口程序。数独游戏。
 │   └── README.md
 ├── sudoku
 │   ├── README.md
-│   ├── __main__.py
-│   ├── __pycache__
-│   │   ├── create_sudoku.cpython-36.pyc
-│   │   └── solve_sudoku.cpython-36.pyc
 │   ├── create_sudoku.py
-│   ├── solve_sudoku.py
-│   └── sudoku.txt
+│   ├── main.py
+│   ├── solve-me.txt
+│   └── solve_sudoku.py
 └── tests
     └── README.md
 
-4 directories, 11 files
-
+3 directories, 9 files
 ```
 
 ## 编译构建
