@@ -64,6 +64,7 @@ $ python3 main.py -s 'solve-me.txt'
 - [ ] 🚧 建立项目文档（博客）
 - [ ] 代码正确性测试
 - [ ] 代码性能测试
+- [ ] 代码性能优化
 - [ ] 撰写开发博客
 - [ ] 撰写 PSP 表格 (Personal Software Progress)
 - [ ] 实现 GUI
