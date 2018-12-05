@@ -23,6 +23,8 @@ class GenerateSudoku():
         # startTime = time.time()
         print("[INFO] Generating", count, "sudoku...")
         with open('sudoku.txt', 'a+') as f:
+            # 清除文件内容
+            f.truncate(0)
             for _ in range(count):
                 self.generateCandidate()
                 # print('[SUDOKU GENERATION TIME] Time', time.time() - startTime)
