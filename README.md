@@ -44,7 +44,7 @@ GUI，实现一个窗口程序。数独游戏。
 $ cd sudoku
 
 # 生成一定数量的数独终局至文件 'sudoku.txt'
-$ python3 __main__.py -c 10
+$ python3 __main__.py -c 2
 ```
 
 ![](https://i.loli.net/2018/12/04/5c063f6c2c75c.png)
@@ -54,12 +54,14 @@ $ python3 __main__.py -c 10
 $ python3 __main__.py -s 'solve-me.txt'
 ```
 
+![](https://i.loli.net/2018/12/05/5c07868b6ca7b.png)
+
 ## 项目进展
 
 - [x] 项目结构建立
 - [x] 生成不重复的数独
-- [ ] 🚧 求解数独
-- [ ] 建立项目文档（博客）
+- [x] 求解数独
+- [ ] 🚧 建立项目文档（博客）
 - [ ] 代码正确性测试
 - [ ] 代码性能测试
 - [ ] 撰写开发博客
