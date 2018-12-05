@@ -20,12 +20,15 @@ class GenerateSudoku():
                           [8, 3, 4, 1, 6, 5, 2, 7, 9]])
 
     def __init__(self, count):
+        # startTime = time.time()
         print("[INFO] Generating", count, "sudoku...")
         with open('sudoku.txt', 'a+') as f:
             for _ in range(count):
                 self.generateCandidate()
+                # print('[SUDOKU GENERATION TIME] Time', time.time() - startTime)
                 numpy.savetxt(f, self.sudoku, fmt='%d')
                 f.write('\n')
+                # print('[FILE WRITE PROCEDURE] Time', time.time() - startTime)
 
         print('[INFO] Generation process complete.')
 
