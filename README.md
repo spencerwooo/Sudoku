@@ -44,14 +44,14 @@ GUI，实现一个窗口程序。数独游戏。
 $ cd sudoku
 
 # 生成一定数量的数独终局至文件 'sudoku.txt'
-$ python3 __main__.py -c 2
+$ python3 main.py -c 2
 ```
 
 ![](https://i.loli.net/2018/12/04/5c063f6c2c75c.png)
 
 ``` bash
 # 从指定文件路径读取文件并解决其中的数独
-$ python3 __main__.py -s 'solve-me.txt'
+$ python3 main.py -s 'solve-me.txt'
 ```
 
 ![](https://i.loli.net/2018/12/05/5c07868b6ca7b.png)
@@ -70,7 +70,7 @@ $ python3 __main__.py -s 'solve-me.txt'
 
 ## 性能测试数独用例
 
-1. 初阶性能测试
+1. 初阶性能测试用例
 
 ```
 0 0 9 0 0 8 0 4 0
@@ -84,7 +84,9 @@ $ python3 __main__.py -s 'solve-me.txt'
 0 5 0 7 0 0 1 0 0
 ```
 
-2. 高阶性能测试
+[2018-12-5] 时间：5.8187s
+
+2. 高阶性能测试用例
 
 ```
 0 0 0 0 0 5 0 2 0
@@ -97,3 +99,5 @@ $ python3 __main__.py -s 'solve-me.txt'
 0 0 0 1 0 0 0 0 7
 0 0 2 4 0 8 0 0 0
 ```
+
+[2018-12-5] 时间：142.0937s（_〆(´Д｀ )这垃圾性能）
