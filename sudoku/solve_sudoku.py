@@ -5,66 +5,60 @@ import numpy
 
 
 class SolveSudoku():
-    # An ignorant initial blank baby sudoku
-    solveThatSudoku = []
-
     def __init__(self, sudokuPath):
         try:
-            self.solveThatSudoku = numpy.loadtxt(sudokuPath, dtype=int)
+             # An ignorant initial baby sudoku
+            solveThatSudoku = numpy.loadtxt(sudokuPath, dtype=int)
             print("[INFO] Begin solving sudoku at", sudokuPath, "...")
-
-            self.solvingSudoku(self.solveThatSudoku)
-
-            print(self.solveThatSudoku)
+            self.solvingSudoku(solveThatSudoku)
+            print(solveThatSudoku)
 
         except FileNotFoundError:
             print("[ERR] File not found.")
 
     def solvingSudoku(self, sudoku):
-        currentBlock = [0, 0]
+        current = [0, 0]
 
-        if not self.blockIsEmpty(currentBlock):
+        if not self.findThatBlank(sudoku, current):
             return True
-        row = currentBlock[0]
-        col = currentBlock[1]
+        row = current[0]
+        col = current[1]
 
-        for num in range(1, 9):
-            if self.numIsCandidate(row, col, num):
-                self.solveThatSudoku[row][col] = num
-                if self.solvingSudoku(self.solveThatSudoku):
+        for num in range(1, 10):
+            if self.numIsCandidate(sudoku, num, row, col):
+                sudoku[row][col] = num
+                if self.solvingSudoku(sudoku):
                     return True
-                self.solveThatSudoku[row][col] = 0
-        
+                sudoku[row][col] = 0
         return False
 
-    def blockIsEmpty(self, currentBlock):
+    def numIsCandidate(self, sudoku, num, row, col):
+        # check if num is used in row
         for i in range(9):
-            for j in range(9):
-                if self.solveThatSudoku[i][j] == 0:
-                    currentBlock[0] = i
-                    currentBlock[1] = j
-                    # print("empty: row="+str(i)+" col="+str(j))
+            if sudoku[row][i] == num:
+                return False
+
+        # check if num is used in column:
+        for i in range(9):
+            if sudoku[i][col] == num:
+                return False
+
+        # check if num is used in block:
+        rowStart = int(row / 3) * 3
+        colStart = int(col / 3) * 3
+        # print(rowStart, colStart)
+        for i in range(rowStart, rowStart + 3):
+            for j in range(colStart, colStart + 3):
+                if sudoku[i][j] == num:
+                    return False
+
+        return True
+
+    def findThatBlank(self, sudoku, current):
+        for row in range(9):
+            for col in range(9):
+                if sudoku[row][col] == 0:
+                    current[0] = row
+                    current[1] = col
                     return True
         return False
-
-    def numUsedInRow(self, currentRow, currentNum):
-        for i in range(9):
-            if self.solveThatSudoku[currentRow][i] == currentNum:
-                return True
-        return False
-
-    def numUsedInCol(self, currentCol, currentNum):
-        for i in range(9):
-            if self.solveThatSudoku[i][currentCol] == currentNum:
-                return True
-        return False
-
-    def numUsedInBigBlock(self, currentRow, currentCol, currentNum):
-        for i in range(3):
-            for j in range(3):
-                if self.solveThatSudoku[currentRow + i][currentCol + j] == currentNum:
-                    return True
-        return False
-
-    def numIsCandidate(self, row, col, num):
-        return not self.numUsedInRow(row, num) and not self.numUsedInCol(col, num) and not self.numUsedInBigBlock(row - row % 3, col - col % 3, num)
