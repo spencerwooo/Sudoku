@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Sudoku',
   description: '命令行交互的基础数独工具库',
-  base: '',
+  base: '/Sudoku/',
   head: [
     ['link', {
       rel: 'icon',
@@ -34,6 +34,10 @@ module.exports = {
   ],
   themeConfig: {
     nav: [
+      {
+        text: 'Progress',
+        link: '/Progress/'
+      },
       {
         text: 'GitHub',
         link: 'https://github.com/spencerwooo/Sudoku'
