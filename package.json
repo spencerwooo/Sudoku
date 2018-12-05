@@ -5,5 +5,12 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
-  }
+  },
+  "name": "sudoku",
+  "version": "1.0.0",
+  "description": "BIT 软件工程大作业",
+  "repository": "git@github.com:spencerwooo/Sudoku.git",
+  "author": "spencerwooo <spencerwoo98@foxmail.com>",
+  "license": "MIT",
+  "private": true
 }
