@@ -21,7 +21,8 @@ def main():
         params = sys.argv[1]
         if params == '-c':
             create_sudoku_count = int(sys.argv[2])
-            assert create_sudoku_count > 0
+            if not create_sudoku_count > 0:
+                raise ValueError
             create_sudoku.GenerateSudoku(create_sudoku_count)
         elif params == '-s':
             sudoku_path = sys.argv[2]
