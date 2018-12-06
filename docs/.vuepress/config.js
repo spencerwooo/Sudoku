@@ -35,7 +35,7 @@ module.exports = {
   themeConfig: {
     nav: [
       {
-        text: 'Progress',
+        text: '开发历程',
         link: '/Progress/'
       },
       {

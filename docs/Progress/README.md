@@ -1,3 +1,7 @@
+---
+sidebarDepth: 3
+---
+
 # 开发历程
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b6449ccc6f3546e686ff8227525ef14e)](https://www.codacy.com/app/spencerwooo/Sudoku?utm_source=github.com&utm_medium=referral&utm_content=spencerwooo/Sudoku&utm_campaign=Badge_Grade)
@@ -31,28 +35,126 @@
 
 ## 解题思路
 
-数独的游戏规则是
+数独是一种数学逻辑游戏，游戏由 9 × 9 个格子组成，玩家需要根据格子提供的数字推理出其他格子的数字。本次项目要求：
+
+- 生成不重复的数独终局至文件，要求数独左上角数字恒为：`(3 + 0) % 9 + 1 = 4`
+- 读取文件中的数独问题，求解并将结果输出至文件
 
 ### 生成数独
 
-目前生成数独的算法，经过我在网上的搜索一共有这样的几种：
+经过我在网上的查阅资料，我发现目前生成数独的算法一共有这样的几种：
 
 1.  暴力搜索 ＋ 回溯法
 2.  矩阵变换法
 3.  全排列平移法
 
-首先我排除了暴力搜索 + 回溯的生成数独终局的方法
+首先我排除了「暴力搜索 + 回溯」的生成数独终局的方法，因为经过资料的对比，相比于另外的两种方法，暴力搜索效率低下，对于 1,000,000 个要求的数独生成数据量来说显得尤为不合适。
+
+另外的一种矩阵变换方法，我参考了这篇文章 - [数独终盘生成的几种方法](https://my.oschina.net/wangmengjun/blog/781984)。**其主要思路在于选择一个初始种子数独，通过在合适范围内进行行、列与数字的随机次数的随机交换来生成我们所要的数独终局**。这种方法不仅效率较高，实现比较方便，最终生成的终局两两匹配度也很低，**于是我首先选择了利用矩阵变换的方法进行功能实现。**
 
 ### 求解数独
 
+前期的初步搜索中，我发现大多数中文资料下求解数独的方法几乎都是「回溯法」和「舞蹈链 - 精确覆盖问题」这两种算法。
+
+其中，解题过程我参考了：
+
+- [暴力算法之美：如何在 1 毫秒内解决数独问题？| 暴力枚举法+深度优先搜索 POJ 2982](https://zhuanlan.zhihu.com/p/31865810?utm_source=qq&utm_medium=social)
+- [Sudoku solving algorithms - Wikipedia](https://en.wikipedia.org/wiki/Sudoku_solving_algorithms)
+- [舞蹈链 - 维基百科](https://zh.wikipedia.org/wiki/%E8%88%9E%E8%B9%88%E9%93%BE)
+- [使用 Dancing Links 算法求解数独](https://www.jianshu.com/p/93b52c37cc65)
+
+等等资料。经过分析，我觉得对于求解数独来讲，最暴力的 **深度优先搜索与回溯的结合** 这种方法比较合适，在之后的实现过程我也先采用了这样的办法。
+
 ## 设计实现
+
+本次项目：
+
+- 我选择使用 Python 进行实现，在 Windows 平台进行代码编写，在 Windows 和 Linux 平台进行测试
+- 我利用 `git` 进行代码的版本控制，代码托管在 GitHub
+- 我利用 `pylint` 对代码进行质量分析检查，利用 [Codacy](https://www.codacy.com/app/spencerwooo/Sudoku?utm_source=github.com&utm_medium=referral&utm_content=spencerwooo/Sudoku&utm_campaign=Badge_Grade) 平台对代码质量进行持续分析监测
+- 我利用 `cProfile` 对代码进行性能分析，利用 `gprof2dot` 生成性能分析报告
+- 我利用 Python 内建模块 `unittest` 进行单元测试，并利用 `Coverage.py` 测试分支覆盖率等指标，并通过 Codacy API 将结果同步至 Codacy 平台持续集成
+
+本次项目的博客：
+
+- 我选择利用 [VuePress](https://vuepress.vuejs.org/) 生成项目博客，来记录我的开发历程
+- 为了部署方便，我利用 [Travis CI](https://travis-ci.org/) 持续集成我的博客内容，并利用 [GitHub Pages](https://pages.github.com/) 托管我博客的静态文件
 
 ### 项目结构
 
+本次项目我托管在 GitHub，利用 `git` 进行版本控制。项目三个分支：
+
+![](https://i.loli.net/2018/12/06/5c09197e3b1ff.png)
+
+- `master` 分支托管数独主程序的源代码、单元测试与性能测试相关文件等
+- `docs` 分支托管博客的源代码与持续集成 CI 配置文件
+- `gh-pages` 分支托管博客的静态文件，GitHub Pages 在此分支进行构建
+
+其中的主程序 `master` 分支结构与功能：
+
+```bash
+.
+├── LICENSE
+├── README.md
+├── bin
+│   └── README.md
+├── sudoku
+│   ├── README.md
+│   ├── create_sudoku.py
+│   ├── main.py
+│   ├── solve-me.txt
+│   └── solve_sudoku.py
+└── tests
+    └── README.md
+
+3 directories, 9 files
+```
+
+- 🐍 `sudoku/`：Python 主程序源码文件夹，程序入口为 `main.py`
+- 🔍 `tests/`：单元测试用例
+- 🚀 `performance/`：性能测试结果（包括原二进制文件与生成的性能测试图鉴）
+
 ### 代码设计
+
+:::warning 注意
+此处代码设计为最初未优化性能的版本，其中：
+
+- 生成数独终局：采用了 **矩阵变换算法**
+- 解决数独：采用了 **未剪枝的深度优先搜索与回溯** 的算法
+
+有很大的改进空间，详见「性能改进」。
+:::
+
+项目建立了共三个文件：
+
+- `main.py`：程序入口，处理输入参数、文件输出与异常情况
+- `create_sudoku.py`：内含类 `GenerateSudoku`
+- `solve_sudoku.py`：内含类 `SolveSudoku`
+
+共两个类：
+
+- `GenerateSudoku`:
+  - `__init__()`：初始化函数
+  - `swap_row()`：交换合适的两行
+  - `swap_col()`：交换合适的两列
+  - `swap_num()`：交换随机的两个数字
+  - `generate_candidate()`：生成最终的数独终局
+- `SolveSudoku`:
+  - `__init__()`：初始化函数
+  - `solving_sudoku`：深度优先搜索解决数独问题主函数
+  - `num_is_candidate`：判断传入数字能否填入相应的位置
+  - `find_that_blank`：寻找剩余数独内是否还有未填入的空位
+
+前者有四个方法，后者有三个方法。
 
 ## 性能改进
 
+🚧 经过一些测试，更改、更新了一些方法。
+
 ## 代码细节
 
+🚧 
+
 ## 项目总结
+
+🚧 通过这个项目...
