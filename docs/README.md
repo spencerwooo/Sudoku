@@ -13,6 +13,8 @@ features:
 footer: MIT Licensed | Copyright © 2018 Spencer Woo
 ---
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b6449ccc6f3546e686ff8227525ef14e)](https://www.codacy.com/app/spencerwooo/Sudoku?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=spencerwooo/Sudoku&amp;utm_campaign=Badge_Grade)
+
 > 🍳 数独 | BIT 软件工程个人作业
 
 ## 需求分析
@@ -49,6 +51,9 @@ GUI，实现一个窗口程序。数独游戏。
 ## 编译运行
 
 ``` bash
+# 安装依赖
+$ pip install -r requirements.txt
+
 # 进入项目源代码目录
 $ cd sudoku
 
