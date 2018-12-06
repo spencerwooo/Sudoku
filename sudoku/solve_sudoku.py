@@ -7,43 +7,43 @@ import numpy
 
 
 class SolveSudoku():
-    def __init__(self, sudokuPath):
+    def __init__(self, ssudoku_path):
         try:
              # An ignorant initial baby sudoku
-            solveThatSudoku = numpy.loadtxt(sudokuPath, dtype=int)
-            print("[INFO] Begin solving sudoku at", sudokuPath, "...")
-            sudokuCount = int(len(solveThatSudoku) / 9)
-            sudokuList = numpy.array_split(solveThatSudoku, sudokuCount)
-            with open('sudoku.txt', 'a+') as f:
-                f.truncate(0)
-                for eachSudoku in sudokuList:
-                    startTime = time.time()
-                    self.solvingSudoku(eachSudoku)
-                    # print(eachSudoku)
-                    numpy.savetxt(f, eachSudoku, fmt='%d')
-                    f.write('\n')
-                    print('[SOLVED!] Time:', round(time.time() - startTime, 4), 'seconds.')
+            solve_that_sudoku = numpy.loadtxt(ssudoku_path, dtype=int)
+            print("[INFO] Begin solving sudoku at", ssudoku_path, "...")
+            sudoku_count = int(len(solve_that_sudoku) / 9)
+            sudoku_list = numpy.array_split(solve_that_sudoku, sudoku_count)
+            with open('sudoku.txt', 'a+') as sudoku_answer_file:
+                sudoku_answer_file.truncate(0)
+                for each_sudoku in sudoku_list:
+                    start_time = time.time()
+                    self.solving_sudoku(each_sudoku)
+                    # print(each_sudoku)
+                    numpy.savetxt(sudoku_answer_file, each_sudoku, fmt='%d')
+                    sudoku_answer_file.write('\n')
+                    print('[SOLVED!] Time:', round(time.time() - start_time, 4), 'seconds.')
 
         except FileNotFoundError:
             print("[ERR] File not found.")
 
-    def solvingSudoku(self, sudoku):
+    def solving_sudoku(self, sudoku):
         current = [0, 0]
 
-        if not self.findThatBlank(sudoku, current):
+        if not self.find_that_blank(sudoku, current):
             return True
         row = current[0]
         col = current[1]
 
         for num in range(1, 10):
-            if self.numIsCandidate(sudoku, num, row, col):
+            if self.num_is_candidate(sudoku, num, row, col):
                 sudoku[row][col] = num
-                if self.solvingSudoku(sudoku):
+                if self.solving_sudoku(sudoku):
                     return True
                 sudoku[row][col] = 0
         return False
 
-    def numIsCandidate(self, sudoku, num, row, col):
+    def num_is_candidate(self, sudoku, num, row, col):
         # check if num is used in row
         for i in range(9):
             if sudoku[row][i] == num:
@@ -55,17 +55,17 @@ class SolveSudoku():
                 return False
 
         # check if num is used in block:
-        rowStart = int(row / 3) * 3
-        colStart = int(col / 3) * 3
-        # print(rowStart, colStart)
-        for i in range(rowStart, rowStart + 3):
-            for j in range(colStart, colStart + 3):
+        row_start = int(row / 3) * 3
+        col_start = int(col / 3) * 3
+        # print(row_start, col_start)
+        for i in range(row_start, row_start + 3):
+            for j in range(col_start, col_start + 3):
                 if sudoku[i][j] == num:
                     return False
 
         return True
 
-    def findThatBlank(self, sudoku, current):
+    def find_that_blank(self, sudoku, current):
         for row in range(9):
             for col in range(9):
                 if sudoku[row][col] == 0:
