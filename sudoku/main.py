@@ -24,17 +24,19 @@ def main():
         elif params == '-s':
             sudokuPath = sys.argv[2]
             solve_sudoku.SolveSudoku(sudokuPath)
+        else:
+            print(Fore.RED + "[ERR] Invalid command.", Style.RESET_ALL)
 
     except ValueError:
-        print(Fore.RED + "[ERR] Please input correct number.", Style.RESET_ALL)
+        print(Fore.RED + "[ERR] Please input a positive integer.", Style.RESET_ALL)
     except AssertionError:
-        print(Fore.RED + "[ERR] Number must be larger than 0.", Style.RESET_ALL)
+        print(Fore.RED + "[ERR] Number of sudoku must be larger than 0.", Style.RESET_ALL)
     except IOError:
         print(Fore.RED + "[ERR] Error reading file.", Style.RESET_ALL)
-    except ValueError:
-        print(Fore.CYAN + "[INFO] Usage:\n")
-        print("[USAGE] `python main.py -c 10`: Create 10 sudoku final rounds.")
-        print("[USAGE] `python main.py -s \"solve-me.txt\"`: Solve sudoku puzzle at `solve-me.txt`.\n", Style.RESET_ALL)
+    except IndexError:
+        print("[INFO] Usage:\n")
+        print(Fore.CYAN + "-> [USAGE] `python main.py -c 10`: Create 10 sudoku final rounds.")
+        print("-> [USAGE] - `python main.py -s \"solve-me.txt\"`: Solve sudoku puzzle at `solve-me.txt`.\n", Style.RESET_ALL)
 
     finally:
         print('[TIME] Total time:', round(
