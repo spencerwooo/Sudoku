@@ -33,8 +33,8 @@ def main():
         print(Fore.RED + "[ERR] Error reading file.", Style.RESET_ALL)
     except ValueError:
         print(Fore.CYAN + "[INFO] Usage:\n")
-        print("[USAGE] `./__main__.py -c 10`: Create 10 sudoku final rounds.")
-        print("[USAGE] `./__main__.py -s \"solve-me.txt\"`: Solve sudoku puzzle at `solve-me.txt`.\n", Style.RESET_ALL)
+        print("[USAGE] `python main.py -c 10`: Create 10 sudoku final rounds.")
+        print("[USAGE] `python main.py -s \"solve-me.txt\"`: Solve sudoku puzzle at `solve-me.txt`.\n", Style.RESET_ALL)
 
     finally:
         print('[TIME] Total time:', round(
