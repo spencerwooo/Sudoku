@@ -46,24 +46,25 @@ GUI，实现一个窗口程序。数独游戏。
 3 directories, 9 files
 ```
 
-## 编译构建
+## 编译运行
 
 ``` bash
 # 进入项目源代码目录
 $ cd sudoku
 
 # 生成一定数量的数独终局至文件 'sudoku.txt'
-$ python3 main.py -c 2
+$ python main.py -c 2
 ```
 
-![](https://i.loli.net/2018/12/04/5c063f6c2c75c.png)
+![](https://i.loli.net/2018/12/06/5c08b302336dd.png)
 
 ``` bash
 # 从指定文件路径读取文件并解决其中的数独
-$ python3 main.py -s 'solve-me.txt'
+$ python main.py -s 'solve-me.txt'
 ```
 
-![](https://i.loli.net/2018/12/05/5c07868b6ca7b.png)
+![](https://i.loli.net/2018/12/06/5c08b3635562f.png)
+
 
 ## 项目进展
 
