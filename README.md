@@ -1,7 +1,7 @@
 # Sudoku
 
 [![Travis CI](https://api.travis-ci.org/spencerwooo/Sudoku.svg?branch=docs)](https://travis-ci.org/spencerwooo/Sudoku)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b6449ccc6f3546e686ff8227525ef14e)](https://www.codacy.com/app/spencerwooo/Sudoku?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=spencerwooo/Sudoku&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/af90b6b7da74437ca6b1b1b0eb0443cd)](https://www.codacy.com/app/spencerwooo/Sudoku?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=spencerwooo/Sudoku&amp;utm_campaign=Badge_Grade)
 ![BIT](https://img.shields.io/badge/BIT%20%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-%E6%95%B0%E7%8B%AC-ff69b4.svg)
 [![GitHub](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/spencerwooo/Sudoku/blob/master/LICENSE)
 
