@@ -3,8 +3,9 @@
 
 
 import random
-import numpy
 import time
+
+import numpy
 
 
 class GenerateSudoku():

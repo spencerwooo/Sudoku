@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding=utf-8 -*-
 
-import create_sudoku
-import solve_sudoku
 import sys
 import time
-from colorama import init, Fore, Back, Style
+
+from colorama import Back, Fore, Style, init
+
+import create_sudoku
+import solve_sudoku
 
 
 def main():
