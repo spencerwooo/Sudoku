@@ -8,7 +8,7 @@
 
 ## 结构
 
-```
+```bash
 .
 ├── README.md
 ├── __main__.py
@@ -20,5 +20,4 @@
 └── sudoku.txt
 
 1 directory, 7 files
-
 ```
