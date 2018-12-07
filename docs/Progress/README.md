@@ -99,18 +99,22 @@ sidebarDepth: 3
 .
 ├── LICENSE
 ├── README.md
-├── bin
-│   └── README.md
+├── performance
+│   ├── result.png
+│   └── result.pstats
+├── requirements.txt
 ├── sudoku
-│   ├── README.md
-│   ├── create_sudoku.py
-│   ├── main.py
-│   ├── solve-me.txt
-│   └── solve_sudoku.py
+│   ├── README.md
+│   ├── __init__.py
+│   ├── create_sudoku.py
+│   ├── main.py
+│   ├── solve-me.txt
+│   ├── solve_sudoku.py
+│   └── sudoku.txt
 └── tests
     └── README.md
 
-3 directories, 9 files
+3 directories, 13 files
 ```
 
 - 🐍 `sudoku/`：Python 主程序源码文件夹，程序入口为 `main.py`
