@@ -20,6 +20,15 @@ footer: MIT Licensed | Copyright © 2018 Spencer Woo
 
 > 🍳 数独 | BIT 软件工程个人作业
 
+:::tip 项目相关链接
+
+-   GitHub 项目首页：<https://github.com/spencerwooo/Sudoku>
+-   项目博客主页：[https://spencerwoo.com/Sudoku](/)
+-   项目开发历程主页：[https://spencerwoo.com/Sudoku/Progress](/Progress/)
+
+此处为博客首页，包含了项目概要和编译方式。项目要求的「解决项目的心路历程和收获」等内容还请见开发历程页面。
+:::
+
 ## 需求分析
 
 **基础：**

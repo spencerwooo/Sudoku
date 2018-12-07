@@ -6,9 +6,14 @@ sidebarDepth: 3
 
 ## 项目地址
 
+:::tip 项目地址与相关链接
+
 -   GitHub 项目首页：<https://github.com/spencerwooo/Sudoku>
 -   项目博客主页：[https://spencerwoo.com/Sudoku](/)
 -   项目开发历程主页：[https://spencerwoo.com/Sudoku/Progress](/Progress/)
+
+这里是项目要求的「解决项目的心路历程和收获」等开发历程内容页面。
+:::
 
 ## PSP - Personal Software Progress
 
@@ -139,13 +144,13 @@ sidebarDepth: 3
   - `generate_candidate()`：生成最终的数独终局
 - `SolveSudoku`:
   - `__init__()`：初始化函数
-  - `solving_sudoku`：深度优先搜索解决数独问题主函数
-  - `num_is_candidate`：判断传入数字能否填入相应的位置
-  - `find_that_blank`：寻找剩余数独内是否还有未填入的空位
-
-前者有四个方法，后者有三个方法。
+  - `solving_sudoku()`：深度优先搜索解决数独问题主函数
+  - `num_is_candidate()`：判断传入数字能否填入相应的位置
+  - `find_that_blank()`：寻找剩余数独内是否还有未填入的空位
 
 ## 性能改进
+
+![](https://i.loli.net/2018/12/07/5c09fa4e3ebc4.png)
 
 🚧 经过一些测试，更改、更新了一些方法。
 
