@@ -4,8 +4,6 @@ sidebarDepth: 3
 
 # 开发历程
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b6449ccc6f3546e686ff8227525ef14e)](https://www.codacy.com/app/spencerwooo/Sudoku?utm_source=github.com&utm_medium=referral&utm_content=spencerwooo/Sudoku&utm_campaign=Badge_Grade)
-
 ## 项目地址
 
 -   GitHub 项目首页：<https://github.com/spencerwooo/Sudoku>
