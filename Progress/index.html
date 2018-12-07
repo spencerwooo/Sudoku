@@ -13,7 +13,7 @@
   <meta name="msapplication-TileImage" content="/favicon.png">
   <meta name="msapplication-TileColor" content="#06BDFF">
     
-    <link rel="preload" href="/Sudoku/assets/css/0.styles.21b6abcb.css" as="style"><link rel="preload" href="/Sudoku/assets/js/app.53dfb3d1.js" as="script"><link rel="preload" href="/Sudoku/assets/js/3.056b9b53.js" as="script"><link rel="prefetch" href="/Sudoku/assets/js/2.1a3627a8.js"><link rel="prefetch" href="/Sudoku/assets/js/4.a7c760ec.js"><link rel="prefetch" href="/Sudoku/assets/js/5.172968dc.js">
+    <link rel="preload" href="/Sudoku/assets/css/0.styles.21b6abcb.css" as="style"><link rel="preload" href="/Sudoku/assets/js/app.34a60a7e.js" as="script"><link rel="preload" href="/Sudoku/assets/js/3.056b9b53.js" as="script"><link rel="prefetch" href="/Sudoku/assets/js/2.1a3627a8.js"><link rel="prefetch" href="/Sudoku/assets/js/4.8c62a47e.js"><link rel="prefetch" href="/Sudoku/assets/js/5.172968dc.js">
     <link rel="stylesheet" href="/Sudoku/assets/css/0.styles.21b6abcb.css">
   </head>
   <body>
@@ -39,6 +39,6 @@
 </code></pre></div><ul><li>🐍 <code>sudoku/</code>：Python 主程序源码文件夹，程序入口为 <code>main.py</code></li> <li>🔍 <code>tests/</code>：单元测试用例</li> <li>🚀 <code>performance/</code>：性能测试结果（包括原二进制文件与生成的性能测试图鉴）</li></ul> <h3 id="代码设计"><a href="#代码设计" aria-hidden="true" class="header-anchor">#</a> 代码设计</h3> <div class="warning custom-block"><p class="custom-block-title">注意</p> <p>此处代码设计为最初未优化性能的版本，其中：</p> <ul><li>生成数独终局：采用了 <strong>矩阵变换算法</strong></li> <li>解决数独：采用了 <strong>未剪枝的深度优先搜索与回溯</strong> 的算法</li></ul> <p>有很大的改进空间，详见「性能改进」。</p></div> <p>项目建立了共三个文件：</p> <ul><li><code>main.py</code>：程序入口，处理输入参数、文件输出与异常情况</li> <li><code>create_sudoku.py</code>：内含类 <code>GenerateSudoku</code></li> <li><code>solve_sudoku.py</code>：内含类 <code>SolveSudoku</code></li></ul> <p>共两个类：</p> <ul><li><code>GenerateSudoku</code>:
 <ul><li><code>__init__()</code>：初始化函数</li> <li><code>swap_row()</code>：交换合适的两行</li> <li><code>swap_col()</code>：交换合适的两列</li> <li><code>swap_num()</code>：交换随机的两个数字</li> <li><code>generate_candidate()</code>：生成最终的数独终局</li></ul></li> <li><code>SolveSudoku</code>:
 <ul><li><code>__init__()</code>：初始化函数</li> <li><code>solving_sudoku</code>：深度优先搜索解决数独问题主函数</li> <li><code>num_is_candidate</code>：判断传入数字能否填入相应的位置</li> <li><code>find_that_blank</code>：寻找剩余数独内是否还有未填入的空位</li></ul></li></ul> <p>前者有四个方法，后者有三个方法。</p> <h2 id="性能改进"><a href="#性能改进" aria-hidden="true" class="header-anchor">#</a> 性能改进</h2> <p>🚧 经过一些测试，更改、更新了一些方法。</p> <h2 id="代码细节"><a href="#代码细节" aria-hidden="true" class="header-anchor">#</a> 代码细节</h2> <p>🚧</p> <h2 id="项目总结"><a href="#项目总结" aria-hidden="true" class="header-anchor">#</a> 项目总结</h2> <p>🚧 通过这个项目...</p></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">12/6/2018, 9:10:07 PM</span></div></div> <!----> </div> <!----></div></div>
-    <script src="/Sudoku/assets/js/3.056b9b53.js" defer></script><script src="/Sudoku/assets/js/app.53dfb3d1.js" defer></script>
+    <script src="/Sudoku/assets/js/3.056b9b53.js" defer></script><script src="/Sudoku/assets/js/app.34a60a7e.js" defer></script>
   </body>
 </html>
