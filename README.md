@@ -34,6 +34,7 @@ GUI，实现一个窗口程序。数独游戏。
 ├── requirements.txt
 ├── sudoku
 │   ├── README.md
+│   ├── __init__.py
 │   ├── create_sudoku.py
 │   ├── main.py
 │   ├── solve-me.txt
@@ -41,6 +42,8 @@ GUI，实现一个窗口程序。数独游戏。
 │   └── sudoku.txt
 └── tests
     └── README.md
+
+3 directories, 13 files
 ```
 
 ## 编译运行
@@ -70,10 +73,10 @@ $ python main.py -s 'solve-me.txt'
 -   [x] 项目结构建立
 -   [x] 生成不重复的数独
 -   [x] 求解数独
--   [ ] 🚧 建立项目文档（博客）
--   [ ] 代码正确性测试
--   [ ] 代码性能测试
--   [ ] 代码性能优化
+-   [x] 建立项目文档（博客）
+-   [x] 代码正确性测试
+-   [x] 代码性能测试
+-   [ ] 代码性能优化 🚩
 -   [ ] 撰写开发博客
 -   [ ] 撰写 PSP 表格 (Personal Software Progress)
 -   [ ] 实现 GUI
