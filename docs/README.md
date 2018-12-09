@@ -13,10 +13,10 @@ features:
 footer: MIT Licensed | Copyright © 2018 Spencer Woo
 ---
 
-[![Travis CI](https://api.travis-ci.org/spencerwooo/Sudoku.svg?branch=docs)](https://travis-ci.org/spencerwooo/Sudoku)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/af90b6b7da74437ca6b1b1b0eb0443cd)](https://www.codacy.com/app/spencerwooo/Sudoku?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=spencerwooo/Sudoku&amp;utm_campaign=Badge_Grade)
-![BIT](https://img.shields.io/badge/BIT%20%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-%E6%95%B0%E7%8B%AC-ff69b4.svg)
-[![GitHub](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/spencerwooo/Sudoku/blob/master/LICENSE)
+[![](https://img.shields.io/travis/spencerwooo/Sudoku/docs.svg?style=for-the-badge)](https://travis-ci.org/spencerwooo/Sudoku)
+[![](https://img.shields.io/codacy/grade/af90b6b7da74437ca6b1b1b0eb0443cd.svg?style=for-the-badge)](https://www.codacy.com/app/spencerwooo/Sudoku?utm_source=github.com&utm_medium=referral&utm_content=spencerwooo/Sudoku&utm_campaign=Badge_Grade)
+[![](https://img.shields.io/codacy/coverage/af90b6b7da74437ca6b1b1b0eb0443cd.svg?style=for-the-badge)](https://www.codacy.com/app/spencerwooo/Sudoku?utm_source=github.com&utm_medium=referral&utm_content=spencerwooo/Sudoku&utm_campaign=Badge_Coverage)
+[![](https://img.shields.io/github/license/spencerwooo/Sudoku.svg?style=for-the-badge)](https://github.com/spencerwooo/Sudoku/blob/master/LICENSE)
 
 > 🍳 数独 | BIT 软件工程个人作业
 
@@ -46,22 +46,24 @@ GUI，实现一个窗口程序。数独游戏。
 .
 ├── LICENSE
 ├── README.md
+├── docs
 ├── performance
-│   ├── result.png
-│   └── result.pstats
+│   ├── performance_update.png
+│   ├── performance_update.pstats
+│   ├── result.png
+│   └── result.pstats
 ├── requirements.txt
 ├── sudoku
-│   ├── README.md
-│   ├── __init__.py
-│   ├── create_sudoku.py
-│   ├── main.py
-│   ├── solve-me.txt
-│   ├── solve_sudoku.py
-│   └── sudoku.txt
+│   ├── README.md
+│   ├── __init__.py
+│   ├── create_sudoku.py
+│   ├── main.py
+│   ├── solve-me.txt
+│   ├── solve_sudoku.py
+│   └── sudoku.txt
 └── tests
-    └── README.md
-
-3 directories, 13 files
+    ├── README.md
+    └── coverage.xml
 ```
 
 ## 编译运行
