@@ -1,15 +1,28 @@
-# Sudoku
+<div align="center">
 
-[![Travis CI](https://api.travis-ci.org/spencerwooo/Sudoku.svg?branch=docs)](https://travis-ci.org/spencerwooo/Sudoku)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/af90b6b7da74437ca6b1b1b0eb0443cd)](https://www.codacy.com/app/spencerwooo/Sudoku?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=spencerwooo/Sudoku&amp;utm_campaign=Badge_Grade)
-![BIT](https://img.shields.io/badge/BIT%20%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-%E6%95%B0%E7%8B%AC-ff69b4.svg)
-[![GitHub](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/spencerwooo/Sudoku/blob/master/LICENSE)
+<img src="https://raw.githubusercontent.com/spencerwooo/Sudoku/docs/docs/.vuepress/public/favicon.png" alt="Sudoku" width="20%" >
 
-> 🍳 数独 | BIT 软件工程个人作业
+<h1>Sudoku</h1>
 
--   GitHub 项目首页：<https://github.com/spencerwooo/Sudoku>
--   项目博客主页：<https://spencerwoo.com/Sudoku>
--   项目开发历程主页：<https://spencerwoo.com/Sudoku/Progress>
+<h3>🔢🤔🐍</h3>
+
+<p>
+<strong>BIT 软件开发个人项目</strong><br>
+快速生成、急速解决。Python 实现。高效简洁、迅猛开发
+</p>
+
+[![](https://img.shields.io/travis/spencerwooo/Sudoku/docs.svg?style=for-the-badge)](https://travis-ci.org/spencerwooo/Sudoku)
+[![](https://img.shields.io/codacy/grade/af90b6b7da74437ca6b1b1b0eb0443cd.svg?style=for-the-badge)](https://www.codacy.com/app/spencerwooo/Sudoku?utm_source=github.com&utm_medium=referral&utm_content=spencerwooo/Sudoku&utm_campaign=Badge_Grade)
+[![](https://img.shields.io/codacy/coverage/af90b6b7da74437ca6b1b1b0eb0443cd.svg?style=for-the-badge)](https://www.codacy.com/app/spencerwooo/Sudoku?utm_source=github.com&utm_medium=referral&utm_content=spencerwooo/Sudoku&utm_campaign=Badge_Coverage)
+[![](https://img.shields.io/github/license/spencerwooo/Sudoku.svg?style=for-the-badge)](https://github.com/spencerwooo/Sudoku/blob/master/LICENSE)
+
+<a href="https://github.com/spencerwooo/Sudoku">项目主页</a>
+<span> · </span>
+<a href="https://spencerwoo.com/Sudoku">博客首页</a>
+<span> · </span>
+<a href="https://spencerwoo.com/Sudoku/Progress">开发历程</a>
+
+</div>
 
 ## 需求分析
 
@@ -28,7 +41,10 @@ GUI，实现一个窗口程序。数独游戏。
 .
 ├── LICENSE
 ├── README.md
+├── docs
 ├── performance
+│   ├── performance_update.png
+│   ├── performance_update.pstats
 │   ├── result.png
 │   └── result.pstats
 ├── requirements.txt
@@ -41,9 +57,8 @@ GUI，实现一个窗口程序。数独游戏。
 │   ├── solve_sudoku.py
 │   └── sudoku.txt
 └── tests
-    └── README.md
-
-3 directories, 13 files
+    ├── README.md
+    └── coverage.xml
 ```
 
 ## 编译运行
@@ -76,9 +91,9 @@ $ python main.py -s 'solve-me.txt'
 -   [x] 建立项目文档（博客）
 -   [x] 代码正确性测试
 -   [x] 代码性能测试
--   [ ] 代码性能优化 🚩
--   [ ] 撰写开发博客
--   [ ] 撰写 PSP 表格 (Personal Software Progress)
+-   [x] 代码性能优化 🚩
+-   [x] 撰写开发博客
+-   [x] 撰写 PSP 表格 (Personal Software Progress) 🚩
 -   [ ] 实现 GUI
 
 ## 性能测试数独用例
@@ -97,7 +112,10 @@ $ python main.py -s 'solve-me.txt'
 0 5 0 7 0 0 1 0 0
 ```
 
-[2018-12-5] 时间：5.8187s
+**我的时间**：
+
+- [2018-12-5] 时间：5.8187s
+- [2018-12-9] 时间：0.012s
 
 2.  高阶性能测试用例
 
@@ -113,7 +131,11 @@ $ python main.py -s 'solve-me.txt'
 0 0 2 4 0 8 0 0 0
 ```
 
-[2018-12-5] 时间：142.0937s（\_〆(´Д｀ )这垃圾性能）
+**我的时间**：
+
+- [2018-12-5] 时间：142.0937s（_〆(´Д｀ ) 这垃圾性能）
+- [2018-12-9] 时间：0.2017s（(づ￣ 3￣)づ 牛逼！）
+
 
 * * *
 
