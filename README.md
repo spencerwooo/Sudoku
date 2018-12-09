@@ -1,26 +1,23 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/spencerwooo/Sudoku/docs/docs/.vuepress/public/favicon.png" alt="Sudoku" width="20%" >
+<img src="https://raw.githubusercontent.com/spencerwooo/Sudoku/docs/docs/.vuepress/public/favicon.png" alt="Sudoku" width="12%" >
 
 <h1>Sudoku</h1>
 
-<h3>🔢🤔🐍</h3>
-
-<p>
 <strong>BIT 软件开发个人项目</strong><br>
-快速生成、急速解决。Python 实现。高效简洁、迅猛开发
-</p>
 
-[![](https://img.shields.io/travis/spencerwooo/Sudoku/docs.svg?style=for-the-badge)](https://travis-ci.org/spencerwooo/Sudoku)
-[![](https://img.shields.io/codacy/grade/af90b6b7da74437ca6b1b1b0eb0443cd.svg?style=for-the-badge)](https://www.codacy.com/app/spencerwooo/Sudoku?utm_source=github.com&utm_medium=referral&utm_content=spencerwooo/Sudoku&utm_campaign=Badge_Grade)
-[![](https://img.shields.io/codacy/coverage/af90b6b7da74437ca6b1b1b0eb0443cd.svg?style=for-the-badge)](https://www.codacy.com/app/spencerwooo/Sudoku?utm_source=github.com&utm_medium=referral&utm_content=spencerwooo/Sudoku&utm_campaign=Badge_Coverage)
-[![](https://img.shields.io/github/license/spencerwooo/Sudoku.svg?style=for-the-badge)](https://github.com/spencerwooo/Sudoku/blob/master/LICENSE)
-
+<h3>
 <a href="https://github.com/spencerwooo/Sudoku">项目主页</a>
 <span> · </span>
 <a href="https://spencerwoo.com/Sudoku">博客首页</a>
 <span> · </span>
 <a href="https://spencerwoo.com/Sudoku/Progress">开发历程</a>
+</h3>
+
+[![](https://img.shields.io/travis/spencerwooo/Sudoku/docs.svg?style=for-the-badge)](https://travis-ci.org/spencerwooo/Sudoku)
+[![](https://img.shields.io/codacy/grade/af90b6b7da74437ca6b1b1b0eb0443cd.svg?style=for-the-badge)](https://www.codacy.com/app/spencerwooo/Sudoku?utm_source=github.com&utm_medium=referral&utm_content=spencerwooo/Sudoku&utm_campaign=Badge_Grade)
+[![](https://img.shields.io/codacy/coverage/af90b6b7da74437ca6b1b1b0eb0443cd.svg?style=for-the-badge)](https://www.codacy.com/app/spencerwooo/Sudoku?utm_source=github.com&utm_medium=referral&utm_content=spencerwooo/Sudoku&utm_campaign=Badge_Coverage)
+[![](https://img.shields.io/github/license/spencerwooo/Sudoku.svg?style=for-the-badge)](https://github.com/spencerwooo/Sudoku/blob/master/LICENSE)
 
 </div>
 
