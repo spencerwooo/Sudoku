@@ -75,9 +75,9 @@ sidebarDepth: 3
 
 -   我选择使用 Python 进行实现，在 Windows 平台进行代码编写，在 Windows 和 Linux 平台进行测试
 -   我利用 `git` 进行代码的版本控制，代码托管在 GitHub
--   我利用 `pylint` 对代码进行质量分析检查，利用 [Codacy](https://www.codacy.com/app/spencerwooo/Sudoku?utm_source=github.com&utm_medium=referral&utm_content=spencerwooo/Sudoku&utm_campaign=Badge_Grade) 平台对代码质量进行持续分析监测
+-   我利用 `pylint` 对代码进行质量分析检查，利用 [Codacy](https://www.codacy.com/app/spencerwooo/Sudoku?utm_source=github.com&utm_medium=referral&utm_content=spencerwooo/Sudoku&utm_campaign=Badge_Grade) 平台对代码质量进行持续分析监测：[![Codacy Badge](https://api.codacy.com/project/badge/Grade/af90b6b7da74437ca6b1b1b0eb0443cd)](https://www.codacy.com/app/spencerwooo/Sudoku?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=spencerwooo/Sudoku&amp;utm_campaign=Badge_Grade)
 -   我利用 `cProfile` 对代码进行性能分析，利用 `gprof2dot` 生成性能分析报告
--   我利用 Python 内建模块 `unittest` 进行单元测试，并利用 `Coverage.py` 测试分支覆盖率等指标，并通过 Codacy API 将结果同步至 Codacy 平台持续集成
+-   我设计了 [十组测试用例](https://github.com/spencerwooo/Sudoku/tree/master/tests) 进行单元测试，并利用 `Coverage.py` 测试分支覆盖率等指标，并通过 Codacy API 将结果同步至 [Codacy 平台](https://app.codacy.com/project/spencerwooo/Sudoku/dashboard) 持续集成：[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/af90b6b7da74437ca6b1b1b0eb0443cd)](https://www.codacy.com/app/spencerwooo/Sudoku?utm_source=github.com&utm_medium=referral&utm_content=spencerwooo/Sudoku&utm_campaign=Badge_Coverage)
 
 本次项目的博客：
 
@@ -100,22 +100,24 @@ sidebarDepth: 3
 .
 ├── LICENSE
 ├── README.md
+├── docs
 ├── performance
-│   ├── result.png
-│   └── result.pstats
+│   ├── performance_update.png
+│   ├── performance_update.pstats
+│   ├── result.png
+│   └── result.pstats
 ├── requirements.txt
 ├── sudoku
-│   ├── README.md
-│   ├── __init__.py
-│   ├── create_sudoku.py
-│   ├── main.py
-│   ├── solve-me.txt
-│   ├── solve_sudoku.py
-│   └── sudoku.txt
+│   ├── README.md
+│   ├── __init__.py
+│   ├── create_sudoku.py
+│   ├── main.py
+│   ├── solve-me.txt
+│   ├── solve_sudoku.py
+│   └── sudoku.txt
 └── tests
-    └── README.md
-
-3 directories, 13 files
+    ├── README.md
+    └── coverage.xml
 ```
 
 -   🐍 `sudoku/`：Python 主程序源码文件夹，程序入口为 `main.py`
