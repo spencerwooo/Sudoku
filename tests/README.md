@@ -21,8 +21,9 @@
 - `coverage run -a main.py -c 1.5`
 - `coverage run -a main.py -c abc`
 - `coverage run -a main.py -s 'balabala.txt'`
-- `coverage run -a main.py abc`
+- `coverage run -a main.py -r`
 - `coverage run -a main.py *`
+- `coverage run -a main.py abc`
 
 ## 测试结果
 
