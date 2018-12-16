@@ -17,24 +17,24 @@ sidebarDepth: 3
 
 ## II. PSP
 
-|                PSP 2.1                | Personal Software Progress Stages | 预估耗时（分钟） | 实际耗时（分钟） |
-| :-----------------------------------: | :-------------------------------: | :------: | :------: |
-|                Planning               |                 计划                |    60    |    30    |
-|                Estimate               |            估计这个任务需要多少时间           |   2500   |   3000   |
-|              Development              |                 开发                |   1500   |   1800   |
-|                Analysis               |           需求分析（包括学习新技术）           |    500   |    500   |
-|              Design Spec              |               生成设计文档              |    60    |    60    |
-|             Design Review             |          设计复审（和同事审核设计文档）          |    30    |    30    |
-|            Coding Standard            |        代码规范（为目前的开发制定合适的规范）        |    30    |    30    |
-|                 Design                |                具体设计               |    200   |    250   |
-|                 Coding                |                具体编码               |    400   |    450   |
-|              Code Review              |                代码复审               |    60    |    60    |
-|                  Test                 |         测试（自我测试、修改代码、提交测试）        |    200   |    250   |
-|               Reporting               |                 报告                |    20    |    60    |
-|              Test Report              |                测试报告               |    20    |    20    |
-|            Size Measurement           |               计算工作量               |    10    |    10    |
-| Postmortem & Process Improvement Plan |           事后总结，并提出过程改进计划          |    60    |    30    |
-|                                       |                 合计                |   3090   |   3580   |
+|                PSP 2.1                |   Personal Software Progress Stages    | 预估耗时（分钟） | 实际耗时（分钟） |
+| :-----------------------------------: | :------------------------------------: | :--------------: | :--------------: |
+|               Planning                |                  计划                  |        60        |        30        |
+|               Estimate                |        估计这个任务需要多少时间        |       2500       |       3000       |
+|              Development              |                  开发                  |       1500       |       1800       |
+|               Analysis                |       需求分析（包括学习新技术）       |       500        |       500        |
+|              Design Spec              |              生成设计文档              |        60        |        60        |
+|             Design Review             |     设计复审（和同事审核设计文档）     |        30        |        30        |
+|            Coding Standard            | 代码规范（为目前的开发制定合适的规范） |        30        |        30        |
+|                Design                 |                具体设计                |       200        |       250        |
+|                Coding                 |                具体编码                |       400        |       450        |
+|              Code Review              |                代码复审                |        60        |        60        |
+|                 Test                  |  测试（自我测试、修改代码、提交测试）  |       200        |       250        |
+|               Reporting               |                  报告                  |        20        |        60        |
+|              Test Report              |                测试报告                |        20        |        20        |
+|           Size Measurement            |               计算工作量               |        10        |        10        |
+| Postmortem & Process Improvement Plan |      事后总结，并提出过程改进计划      |        60        |        30        |
+|                                       |                  合计                  |       3090       |       3580       |
 
 
 ## III. 解题思路
